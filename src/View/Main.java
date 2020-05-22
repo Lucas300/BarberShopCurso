@@ -26,9 +26,10 @@ public class Main {
         
         //eu posso passar a data como String mas usarei o metodo 
         //Date para mais funcionalidades futuras 
-        Cliente cliente = new Cliente(1, "Lucas" , 'M' , "966601064","rua piraí 190");
+        Cliente cliente = new Cliente(1, "Lucas","itaquaquecetuba" , "0882312");
         
-        System.out.println(cliente);
+        //o get.Nome não existe na classe cliente , mas sim na classe pessoa
+        System.out.println(cliente.getNome());
         /*
         podemos usar um breakpoint na linha de exibição
         e logo em seguida depurar o ariquivo 
@@ -36,7 +37,7 @@ public class Main {
         para ter certeza que os valores foram passados
         */
         
-        Usuario usuario = new Usuario(1,"Barbeiro", "Senha");
+        Usuario usuario = new Usuario(1,"LUCAS", "SENHA2");
         System.out.println(usuario);
     }
 }
