@@ -24,7 +24,7 @@ public class Cliente extends Pessoa{
 
     //aqui foi criado um contrutor para usar todos os atributos da classe pai cliente 
     //construtor completo com todas as informações
-    public Cliente(String endereco, String cep, int id, char sexo, Date dataNascimento, String telefone, String email, String rg) {
+    public Cliente(String endereco, String cep, int id, char sexo, String dataNascimento, String telefone, String email, String rg) {
         super(id, sexo, dataNascimento, telefone, email, rg);
         this.endereco = endereco;
         this.cep = cep;

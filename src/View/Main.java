@@ -5,13 +5,14 @@
  */
 package View;
 
+import Model.Agendamento;
 import Model.Cliente;
 import Model.Servico;
 import Model.Usuario;
 
 /**
  *
- * @author novo
+ * @author Lucas Daniel
  */
 public class Main {
     public static void main(String[]args){
@@ -24,8 +25,7 @@ public class Main {
         System.out.println(servico.getDescricao());
         System.out.println(servico.getValor());
         
-        //eu posso passar a data como String mas usarei o metodo 
-        //Date para mais funcionalidades futuras 
+        
         Cliente cliente = new Cliente(1, "Lucas","itaquaquecetuba" , "0882312");
         
         //o get.Nome não existe na classe cliente , mas sim na classe pessoa
@@ -36,7 +36,10 @@ public class Main {
         clicando com o botão direito no arquivo
         para ter certeza que os valores foram passados
         */
-        
+        //através do agendamento consigo acessar minhas propriedades Cliente e Usuario;
+        Agendamento agendamento = new Agendamento(1,cliente,servico,30,"25/07/2020 09:15");
+        System.out.println(agendamento.getCliente().getNome());
+                
         Usuario usuario = new Usuario(1,"LUCAS", "SENHA2");
         System.out.println(usuario);
     }
