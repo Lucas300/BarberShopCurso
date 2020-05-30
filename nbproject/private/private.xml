@@ -3,15 +3,9 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/novo/Desktop/BarberShopCurso/src/Model/Pessoa.java</file>
-            <file>file:/C:/Users/novo/Desktop/BarberShopCurso/src/View/MenuPrincipal.java</file>
-            <file>file:/C:/Users/novo/Desktop/BarberShopCurso/src/Model/Usuario.java</file>
-            <file>file:/C:/Users/novo/Desktop/BarberShopCurso/src/View/Main.java</file>
-            <file>file:/C:/Users/novo/Desktop/BarberShopCurso/src/Model/Cliente.java</file>
-            <file>file:/C:/Users/novo/Desktop/BarberShopCurso/src/Model/Agendamento.java</file>
+            <file>file:/C:/Users/novo/Desktop/BarberShopCurso/src/Controller/LoginController.java</file>
+            <file>file:/C:/Users/novo/Desktop/BarberShopCurso/src/Controller/Helper/LoginHelper.java</file>
             <file>file:/C:/Users/novo/Desktop/BarberShopCurso/src/View/Login.java</file>
-            <file>file:/C:/Users/novo/Desktop/BarberShopCurso/src/View/Agenda.java</file>
-            <file>file:/C:/Users/novo/Desktop/BarberShopCurso/src/Model/Servico.java</file>
         </group>
     </open-files>
 </project-private>

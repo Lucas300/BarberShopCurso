@@ -5,17 +5,27 @@
  */
 package View;
 
+import Controller.LoginController;
+import javax.swing.JOptionPane;
+import javax.swing.JPasswordField;
+import javax.swing.JTextField;
+
 /**
  *
  * @author novo
  */
 public class Login extends javax.swing.JFrame {
 
+    private final LoginController controller;
+
     /**
      * Creates new form Login
      */
     public Login() {
         initComponents();
+        //como  ja estou na pagina do login e quero controlar ele mesmo uso , this
+        //criamos o campo LoginController
+        controller = new LoginController(this);
     }
 
     /**
@@ -31,8 +41,8 @@ public class Login extends javax.swing.JFrame {
         LabelUsuario = new javax.swing.JLabel();
         LabelSenha = new javax.swing.JLabel();
         TextUsuario = new javax.swing.JTextField();
-        SenhaUsuario = new javax.swing.JPasswordField();
-        jButton1 = new javax.swing.JButton();
+        TextSenha = new javax.swing.JPasswordField();
+        ButtonEntrar = new javax.swing.JButton();
         LabelFundoTransparente = new javax.swing.JLabel();
         LabelImagemFundo = new javax.swing.JLabel();
 
@@ -47,31 +57,31 @@ public class Login extends javax.swing.JFrame {
 
         LabelUsuario.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         LabelUsuario.setForeground(new java.awt.Color(255, 255, 255));
-        LabelUsuario.setText("usuário");
+        LabelUsuario.setText("Usuário:");
         getContentPane().add(LabelUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 470, -1, -1));
 
         LabelSenha.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         LabelSenha.setForeground(new java.awt.Color(255, 255, 255));
-        LabelSenha.setText("senha");
+        LabelSenha.setText("Senha:");
         getContentPane().add(LabelSenha, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 570, -1, -1));
 
         TextUsuario.setDisabledTextColor(new java.awt.Color(0, 0, 0));
-        getContentPane().add(TextUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 500, 280, 40));
-        getContentPane().add(SenhaUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 600, 280, 40));
+        getContentPane().add(TextUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 500, 290, 40));
+        getContentPane().add(TextSenha, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 600, 290, 40));
 
-        jButton1.setBackground(new java.awt.Color(102, 255, 255));
-        jButton1.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        jButton1.setText("Entrar");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        ButtonEntrar.setBackground(new java.awt.Color(102, 255, 255));
+        ButtonEntrar.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        ButtonEntrar.setText("Entrar");
+        ButtonEntrar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                ButtonEntrarActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 680, 280, 40));
+        getContentPane().add(ButtonEntrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 680, 290, 40));
 
         LabelFundoTransparente.setForeground(new java.awt.Color(255, 255, 255));
         LabelFundoTransparente.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/Imagens/painel-login.png"))); // NOI18N
-        getContentPane().add(LabelFundoTransparente, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 300, 550, 500));
+        getContentPane().add(LabelFundoTransparente, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 300, 550, 500));
 
         LabelImagemFundo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/Imagens/Logo.jpg"))); // NOI18N
         getContentPane().add(LabelImagemFundo, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, -10, 810, 1200));
@@ -79,9 +89,13 @@ public class Login extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1ActionPerformed
+    private void ButtonEntrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonEntrarActionPerformed
+       //Executa quando clico no botão 
+       //irá chamar o metodo fizTarefa();
+       this.controller.fizTarefa();
+       System.out.println(TextUsuario.getText());
+       System.out.println(TextSenha.getText());
+    }//GEN-LAST:event_ButtonEntrarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -119,13 +133,36 @@ public class Login extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton ButtonEntrar;
     private javax.swing.JLabel LabelFundoTransparente;
     private javax.swing.JLabel LabelImagemFundo;
     private javax.swing.JLabel LabelLogin;
     private javax.swing.JLabel LabelSenha;
     private javax.swing.JLabel LabelUsuario;
-    private javax.swing.JPasswordField SenhaUsuario;
+    private javax.swing.JPasswordField TextSenha;
     private javax.swing.JTextField TextUsuario;
-    private javax.swing.JButton jButton1;
     // End of variables declaration//GEN-END:variables
+
+   
+    public void exibeMensagem(String mensagem) {
+       JOptionPane.showMessageDialog(null,mensagem);
+    }
+
+    public JPasswordField getTextSenha() {
+        return TextSenha;
+    }
+
+    public void setTextSenha(JPasswordField TextSenha) {
+        this.TextSenha = TextSenha;
+    }
+
+    public JTextField getTextUsuario() {
+        return TextUsuario;
+    }
+
+    public void setTextUsuario(JTextField TextUsuario) {
+        this.TextUsuario = TextUsuario;
+    }
+    
+    
 }

@@ -24,8 +24,8 @@ public class Agendamento {
     private Date data;
     private String observacao;
 
+
 //CONSTRUTOR
-   
     public Agendamento(int id, Cliente cliente, Servico servico, float valor,String data) {
         this.id = id;
         this.cliente = cliente;

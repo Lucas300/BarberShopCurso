@@ -14,6 +14,7 @@ public class Servico {
     private String Descricao;
     private float Valor;
 
+    //CONSTRUTOR
     public Servico(int Id, String Descricao, float Valor) {
         this.Id = Id;
         this.Descricao = Descricao;
